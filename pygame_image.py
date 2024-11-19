@@ -15,19 +15,15 @@ def main():
     kokaton = pg.image.load("fig/3.png")
     kokaton = pg.transform.flip(kokaton, True, False)
     
-    # x = 0
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        screen.blit(bg_img, [0, 0])
+        screen.blit(bg_img, [- (tmr % 800), 0])
         screen.blit(kokaton, [300, 200])
         pg.display.update()
-        tmr += 1     
-        # x += 1
-        # if x > 800:
-        #     x = 0
-        clock.tick(200)
+        tmr += 1
+        clock.tick(300)
 
 
 if __name__ == "__main__":
