@@ -12,8 +12,8 @@ def main():
     bg_img = pg.image.load("fig/pg_bg.jpg")
     tmr = 0
 
-    # kokaton = pg.image.load("fig/3.png")
-    # kokaton = pg.transform.flip(kokaton, True, False)
+    kokaton = pg.image.load("fig/3.png")
+    kokaton = pg.transform.flip(kokaton, True, False)
     
     # x = 0
     while True:
