@@ -35,15 +35,20 @@ def main():
             kk_rct.move_ip((-1, 0))
         if key_lst[pg.K_RIGHT]:
             kk_rct.move_ip((1, 0))
+        else:   # 何もキーを押していない場合は背景画像と同じ速度で左に流れる。
+            kk_rct.move_ip((-1, 0))
+        
+
 
         screen.blit(bg_img, [-(tmr%3200), 0])
         screen.blit(bg_img_inverted, [-(tmr%3200) + 1600, 0])        
         screen.blit(bg_img, [-(tmr%3200) + 3200, 0])
         screen.blit(bg_img_inverted, [-(tmr%3200) + 4800, 0])
         screen.blit(kokaton, kk_rct)
+
         pg.display.update()
         tmr += 1
-        clock.tick(1000)
+        clock.tick(500)
 
 
 if __name__ == "__main__":
