@@ -27,7 +27,7 @@ def main():
         # x += 1
         # if x > 800:
         #     x = 0
-        clock.tick(10)
+        clock.tick(200)
 
 
 if __name__ == "__main__":
